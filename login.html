@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login Form</title>
+    </head>
+    <body bgcolor="orange" style="text-align: center;">
+        <fieldset>
+            <legend>Static Login Form</legend>
+            <input type="text" id="uname" placeholder="Enter Username"><br>
+            <input type="password" id="upwd" placeholder="Enter password"><br><br>
+            <button onclick="login()">Login</button>
+            <br><br>
+            <h1 id="result"></h1>
+        </fieldset>
+        <script>
+            let login = () => {
+    let x = document.getElementById("uname").value;
+    let y = document.getElementById("upwd").value;
+    if (x == "Manas" && y == "manas@143") {
+        document.getElementById("result").innerHTML = "Login Success!";
+    } else {
+        document.getElementById("result").innerHTML = "Login Failed!";
+    }
+}
+        </script>
+    </body>
+</html>

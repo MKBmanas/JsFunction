@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<style>
+  fieldset {
+    width: 20%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: aqua;
+    border-radius: 3%;
+    box-shadow: 0 0 15px rgba(0, 255, 68, 0.5);
+    width: 350px;
+  }
+
+  input:hover {
+    color: aliceblue;
+    background-color: black;
+    border-color: rgb(7, 136, 248);
+    box-shadow: 0 0 15px rgba(226, 14, 14, 0.5);
+    border-radius: 10px 20px 15px 5px;
+  }
+
+  button:hover {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(80, 0, 123, 1) 50%, rgba(0, 0, 0, 1) 100%);
+    color: aliceblue;
+    box-shadow: 0 0 15px rgba(252, 25, 233, 0.5);
+    border-color: aliceblue;
+    border-radius: 10px 20px 15px 5px;
+    border-color: blueviolet;
+    padding: auto;
+  }
+</style>
+
+<body bgcolor="pink" style="text-align: center;">
+  <fieldset>
+    <h1>Number Multiplication</h1>
+    Enter P Value: <input type="number" id="numb1" placeholder="Enter Number"> <br> <br>
+    Enter Q Value: <input type="number" id="numb2" placeholder="Enter Number"> <br> <br>
+    Product: <input type="number" id="product"> <br> <br>
+    <button onclick="product()">Product</button>
+  </fieldset>
+
+  <script>
+    let product = () => {
+      let numb1 = document.getElementById("numb1").value;
+      let numb2 = document.getElementById("numb2").value;
+      document.getElementById("product").value = numb1 * numb2;
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FullName App</title>
+  <style>
+    fieldset
+    {
+      width: 20%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+      background-color: aqua;
+      border-radius: 3%;
+      box-shadow: 0 0 15px rgba(0, 255, 68, 0.5);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+ <Fieldset>
+  <h1>FullName App</h1>
+  First Name: <input type="text" id="fname" placeholder="Enter First Name"><br><br>
+  Last Name: <input type="text" id="lname" placeholder="Enter Last Name"><br><br>
+  Full Name: <input type="text" id="fullname" placeholder="Click on button"><br><br>
+  <button onclick="showFullName()">FullName</button>
+</Fieldset>
+  <script>
+    let showFullName = () => {
+      let firstName = document.getElementById("fname").value;
+      let lastName = document.getElementById("lname").value;
+      document.getElementById("fullname").value = firstName + ' ' + lastName;
+    }
+  </script>
+</body>
+</html>

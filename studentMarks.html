@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        fieldset {
+          width: 20%;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          background-color: aqua;
+          border-radius: 3%;
+          box-shadow: 0 0 15px rgba(0, 255, 68, 0.5);
+          width: 450px;
+        }
+      
+        input:hover {
+          color: aliceblue;
+          background-color: black;
+          border-color: rgb(7, 136, 248);
+          box-shadow: 0 0 15px rgba(226, 14, 14, 0.5);
+          border-radius: 10px 20px 15px 5px;
+        }
+      
+        button:hover {
+          background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(80, 0, 123, 1) 50%, rgba(0, 0, 0, 1) 100%);
+          color: aliceblue;
+          box-shadow: 0 0 15px rgba(252, 25, 233, 0.5);
+          border-color: aliceblue;
+          border-radius: 10px 20px 15px 5px;
+          border-color: blueviolet;
+          padding: auto;
+        }
+      </style>
+    <body bgcolor="yelloe" style="text-align: center;">
+        <fieldset>
+            <h1>Student Marks Calculator</h1>
+            Subject1 Marks <input type="number" id="sub1" placeholder="Enter Mark1"><br> <br> 
+            Subject2 Marks<input type="number" id="sub2" placeholder="Enter Mark2"><br> <br> 
+            Subject3 Marks<input type="number" id="sub3" placeholder="Enter Mark3"><br> <br> <br>
+            Total <input type="number" id="total"> <button onclick="tot()">Tot</button><br>
+            Avarage <input type="number" id="avarage"> <button onclick="avg()">Avg</button>
+        </fieldset>
+        <script>
+              let tot = () => {
+              let sub1 = parseInt(document.getElementById("sub1").value);
+              let sub2 = parseInt(document.getElementById("sub2").value);
+              let sub3 = parseInt(document.getElementById("sub3").value);
+              document.getElementById("total").value = sub1 + sub2 + sub3;
+            }
+        
+              let avg = () => {
+              let total = parseInt(document.getElementById("total").value);
+              document.getElementById("average").value = total / 3;
+            }
+          </script>
+    </body>
+</html>

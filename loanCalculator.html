@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <body bgcolor="yellow" style="text-align: center;">
+        <fieldset>
+            <h1>Loan Calculator</h1>
+            Loan Amount <input type="number" id="lamount" placeholder="Enter Loan Amount"><br>
+            Interest Rate <input type="number" id="irate" placeholder="Enter Interest Rate"><br>
+            Time Period <input type="number" id="tperiod" placeholder="Enter Time Period"><br>
+            Interest Amt <input type="number" id="iamount"><br>
+            Final Amount <input type="number" id="famount"><br><br>
+            <button onclick="showInterestFields()">Interest Amt</button>
+            <button onclick="showFinalFields()">Final Amt</button>
+        </fieldset>
+        
+        <script>
+            let calculateInterest = () => {
+     let loanAmount = parseFloat(document.getElementById("lamount").value);
+    let interestRate = parseFloat(document.getElementById("irate").value);
+    let timePeriod = parseFloat(document.getElementById("tperiod").value);
+    let interestAmount = (loanAmount * interestRate * timePeriod)/ 100;
+    document.getElementById("iamount").value = interestAmount.toFixed(2);
+};
+
+            const calculateFinalAmount = () => {
+                const loanAmount = parseFloat(document.getElementById("lamount").value);
+                const interestRate = parseFloat(document.getElementById("irate").value);
+                const timePeriod = parseFloat(document.getElementById("tperiod").value);
+                
+                const interestAmount = (loanAmount * interestRate * timePeriod) / 100;
+                const finalAmount = loanAmount + interestAmount;
+                
+                document.getElementById("iamount").value = interestAmount.toFixed(2);
+                document.getElementById("famount").value = finalAmount.toFixed(2);
+            };
+        </script>
+    </body>
+</html>
